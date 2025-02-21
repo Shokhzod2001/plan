@@ -2,6 +2,16 @@ console.log("Web serverni boshlash");
 const express = require("express");
 const app = express();
 const http = require("http");
+const fs = require("fs");
+
+let user;
+fs.readFile("database/user.json", "utf-8", (err, data) => {
+  if (err) {
+    console.log("ERROR:", err);
+  } else {
+    user = JSON.parse(data);
+  }
+});
 
 // 1 => entery codes
 app.use(express.static("public")); //requests from any browsers can acess to the public folder meaning
@@ -23,6 +33,11 @@ app.post("/create-item", function (req, res) {
 app.get("/", function (req, res) {
   res.render("harid");
 });
+
+app.get("/author", function (req, res) {
+  res.render("author", { user: user });
+});
+
 const server = http.createServer(app);
 let PORT = 3000;
 server.listen(PORT, function () {
