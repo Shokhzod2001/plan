@@ -1,0 +1,576 @@
+.frame {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  background-color: #e5e5e5;
+}
+
+.frame .main_frame {
+  position: relative;
+  width: 1440px;
+  height: 1312px;
+  display: flex;
+  flex-direction: row;
+  margin-top: 2px;
+  background-color: #f0f0f6;
+}
+
+.main_frame .left_frame {
+  position: relative;
+  padding-left: 47px;
+  padding-right: 38px;
+  box-sizing: border-box;
+  width: 305px;
+  height: 1315px;
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+}
+
+.left_frame .intro {
+  position: relative;
+  margin-top: 47px;
+  width: 228px;
+  height: 253px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.intro .profile_image {
+  width: 156px;
+  height: 135px;
+}
+
+.intro .name {
+  position: relative;
+  margin-top: 27px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  color: rgb(43, 43, 43);
+  font-family: Inter;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 123.6%;
+  letter-spacing: 0%;
+  text-align: left;
+  text-transform: capitalize;
+}
+
+.intro .profession {
+  color: rgb(118, 118, 118);
+  font-family: Inter;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0%;
+  text-align: left;
+  text-transform: capitalize;
+}
+
+.intro .left_icons {
+  margin-top: 18px;
+  margin-bottom: 20px;
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.left_icons .link_href {
+  text-decoration: none;
+  color: black;
+}
+
+.left_icons .link_href .icon {
+  position: relative;
+  width: 24.99px;
+  height: 21.61px;
+  background: rgb(255, 180, 0);
+  border-radius: 50%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.left_frame .marginer {
+  position: relative;
+  margin: 25px 0;
+  width: 220px;
+  height: 0;
+  border: 1.5px solid rgb(240, 240, 246);
+}
+
+.left_frame .info {
+  width: 221px;
+  height: 126px;
+  display: flex;
+  flex-direction: column;
+}
+
+.left_frame .info div {
+  margin-bottom: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.left_frame .info div strong {
+  position: relative;
+  color: rgb(43, 43, 43);
+  font-family: Inter;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 24px;
+  text-align: left;
+  text-transform: capitalize;
+  background: rgb(255, 180, 0);
+}
+
+.left_frame .info div span {
+  color: rgb(43, 43, 43);
+  font-family: Inter;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0%;
+  text-align: right;
+  text-transform: capitalize;
+}
+
+.left_frame .languages {
+  position: relative;
+  width: 220px;
+  height: 153px;
+  display: flex;
+  flex-direction: column;
+}
+
+.languages h1,
+.skills h1,
+.extra_skills h1 {
+  margin-top: 0;
+  margin-bottom: 15px;
+  color: rgb(43, 43, 43);
+  font-family: Inter;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 123.6%;
+  letter-spacing: 0%;
+  text-align: left;
+  text-transform: capitalize;
+}
+
+.languages .first_lang,
+.skills .skill_element {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.first_lang span,
+.skill_element span {
+  color: rgb(118, 118, 118);
+  font-family: Inter;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0%;
+  text-transform: capitalize;
+}
+
+.languages .parcentage_line,
+.skills .parcentage_line {
+  margin-bottom: 10px;
+  border: 0.5px solid rgb(255, 180, 0);
+  border-radius: 30px;
+  position: relative;
+  width: 220px;
+  height: 4px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+.languages .line,
+.skills .line {
+  position: relative;
+  width: 217px;
+  height: 2px;
+  border-radius: 30px;
+  background: rgb(255, 180, 0);
+}
+
+.left_frame .extra_skills {
+  position: relative;
+  width: 186px;
+  height: 148px;
+  display: flex;
+  flex-direction: column;
+}
+
+.extra_skills .skill_elements {
+  width: 100%;
+  height: 24px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.skill_elements div {
+  position: relative;
+  margin-right: 15px;
+  width: 15px;
+  height: 15px;
+}
+
+.skill_elements div span {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  top: 0px;
+  left: 0px;
+  box-sizing: border-box;
+  border: 1px solid rgb(255, 180, 0);
+}
+
+.skill_elements div strong {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  top: 5px;
+  left: 5px;
+  box-sizing: border-box;
+  border: 1px solid rgb(255, 180, 0);
+}
+
+.skill_elements span {
+  color: rgb(118, 118, 118);
+  font-family: Inter;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0%;
+  text-align: left;
+  text-transform: capitalize;
+}
+.main_frame .middle_frame {
+  position: relative;
+  width: 970px;
+  height: 454px;
+  margin-left: 30px;
+  margin-right: 27px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  background-color: white;
+}
+
+.middle_frame .home_section {
+  position: relative;
+  width: 971px;
+  height: 454px;
+  display: flex;
+  flex-direction: row;
+  background-color: white;
+}
+
+.home_section .introduction {
+  margin: 100px 27px 61px 56px;
+  width: 500px;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.introduction .work_place {
+  color: rgb(43, 43, 43);
+  font-family: Inter;
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 123.6%;
+  letter-spacing: 0%;
+  text-align: left;
+}
+
+.introduction .work_info {
+  margin-top: 17px;
+  width: 424px;
+  height: auto;
+  color: rgb(118, 118, 118);
+  font-family: Inter;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0%;
+  text-align: left;
+  text-transform: capitalize;
+}
+
+.introduction .hire_btn {
+  margin-top: 25px;
+  width: 154px;
+  height: 51px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+  background: rgb(255, 180, 0);
+}
+
+.hire_btn button {
+  background: rgb(255, 180, 0);
+  border: none;
+}
+
+.middle_frame .intro_image {
+  margin: 16px 65px 0 0;
+  width: 326px;
+  height: 446px;
+  border: 1px solid black;
+  border-style: dashed;
+}
+
+.intro_image .ell12 {
+  position: absolute;
+  width: 16.02px;
+  height: 15.57px;
+  left: 465.55px;
+  top: 62.26px;
+}
+
+.intro_image .ell13 {
+  position: absolute;
+  width: 16.02px;
+  height: 15.57px;
+  left: 540.45px;
+  top: 381.33px;
+}
+
+.intro_image .ell15 {
+  position: absolute;
+  width: 16.02px;
+  height: 15.57px;
+  left: 50.05px;
+  top: 40.86px;
+}
+
+.intro_image .ell16 {
+  position: absolute;
+  width: 16.02px;
+  height: 15.57px;
+  left: 98.1px;
+  top: 410.22px;
+}
+
+.intro_image .rec52 {
+  position: absolute;
+  width: 15.93px;
+  height: 15.65px;
+  left: 380.43px;
+  top: 333.69px;
+  transform: rotate(25.41deg);
+}
+
+.intro_image .rec51 {
+  position: absolute;
+  width: 16.02px;
+  height: 15.57px;
+  left: 890.55px;
+  top: 110.26px;
+}
+
+.intro_image .poly1 {
+  position: absolute;
+  width: 16.02px;
+  height: 15.57px;
+  left: 930.96px;
+  top: 427.09px;
+}
+
+.middle_frame .service_section {
+  margin-top: 140px;
+  position: relative;
+  width: 970px;
+  height: 653px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.service_section h1 {
+  margin: 0;
+  color: rgb(43, 43, 43);
+  font-family: Inter;
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 123.6%;
+  letter-spacing: 0%;
+  text-align: left;
+  text-transform: capitalize;
+}
+
+.service_section .service_desc {
+  margin-top: 25px;
+  width: 438px;
+  height: auto;
+  color: rgb(118, 118, 118);
+  font-family: Inter;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0%;
+  text-align: center;
+  text-transform: capitalize;
+}
+
+.service_section .service_wrapper {
+  margin-top: 50px;
+  width: 100%;
+  height: 470px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.service_wrapper .service_item {
+  margin-top: 20px;
+  position: relative;
+  width: 310px;
+  height: 225px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: rgb(255, 255, 255);
+}
+
+.service_item .service_image {
+  width: 68px;
+  height: 68px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.service_item .service_title {
+  margin-top: 26px;
+  color: rgb(43, 43, 43);
+  font-family: Inter;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 123.6%;
+  letter-spacing: 0%;
+  text-align: left;
+  text-transform: capitalize;
+}
+
+.service_item .title_desc {
+  margin-top: 15px;
+  width: 260px;
+  height: auto;
+  color: rgb(118, 118, 118);
+  font-family: Inter;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0%;
+  text-align: center;
+  text-transform: capitalize;
+}
+.service_item .order_btn {
+  margin-top: 15px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+.service_item .order_btn a {
+  color: rgb(255, 180, 0);
+  font-family: Roboto;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 14px;
+  letter-spacing: 0%;
+  text-align: left;
+  text-decoration: none;
+}
+.main_frame .right_frame {
+  position: relative;
+  width: 108px;
+  height: 1315px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: white;
+}
+
+.right_frame .contrast {
+  margin: 50px 41px;
+  position: relative;
+  width: 25px;
+  height: 25px;
+}
+
+.right_frame .home_icons {
+  margin-top: 124px;
+  position: relative;
+  width: 65px;
+  height: 500px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.home_icons .union {
+  position: relative;
+  width: 65px;
+  height: 24px;
+}
+
+.home_icons span {
+  position: absolute;
+  top: 3px;
+  color: var(--White, #fff);
+  font-family: Inter;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+.home_icons .yellow_circle {
+  position: absolute;
+  top: 23px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #ffb400;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.home_icons div {
+  position: relative;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #f0f0f6;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
