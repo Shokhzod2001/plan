@@ -1,12 +1,12 @@
-console.log("Shelby maslahatlari:");
-const list = [
-  "yaxshi talaba bo`ling", // 10-20
-  "to`g`ri boshliq tanlang va ko`p xato qiling", //20-30
-  "o`zingizga ishlashni boshlang", //30-40
-  "siz kuchli bo`lgan narsalarni qiling", //40-50
-  "yoshlarga investitsiya qiling", //50-60
-  "endi dam oling oxirgi ostanofkadasiz", //60 ~
-];
+// console.log("Shelby maslahatlari:");
+// const list = [
+//   "yaxshi talaba bo`ling", // 10-20
+//   "to`g`ri boshliq tanlang va ko`p xato qiling", //20-30
+//   "o`zingizga ishlashni boshlang", //30-40
+//   "siz kuchli bo`lgan narsalarni qiling", //40-50
+//   "yoshlarga investitsiya qiling", //50-60
+//   "endi dam oling oxirgi ostanofkadasiz", //60 ~
+// ];
 
 //regular syn function
 // function giveAdvice(age) {
@@ -30,29 +30,29 @@ const list = [
 // giveAdvice(23);
 
 // callback function     err | data
-function giveAdvice(age, callback) {
-  if (typeof age !== "number") callback("insert a number", null);
-  else if (age <= 20) callback(null, list[0]);
-  else if (age > 20 && age <= 30) callback(null, list[1]);
-  else if (age > 30 && age <= 40) callback(null, list[2]);
-  else if (age > 40 && age <= 50) callback(null, list[3]);
-  else if (age > 50 && age <= 60) callback(null, list[4]);
-  else {
-    setInterval(() => {
-      callback(null, list[5]);
-    }, 1000);
-  }
-}
+// function giveAdvice(age, callback) {
+//   if (typeof age !== "number") callback("insert a number", null);
+//   else if (age <= 20) callback(null, list[0]);
+//   else if (age > 20 && age <= 30) callback(null, list[1]);
+//   else if (age > 30 && age <= 40) callback(null, list[2]);
+//   else if (age > 40 && age <= 50) callback(null, list[3]);
+//   else if (age > 50 && age <= 60) callback(null, list[4]);
+//   else {
+//     setInterval(() => {
+//       callback(null, list[5]);
+//     }, 1000);
+//   }
+// }
 
 // call part for callback function
-console.log("passed here");
-giveAdvice(65, (err, data) => {
-  if (err) console.log("ERROR:", err);
-  else {
-    console.log("Answer:", data);
-  }
-});
-console.log("Passed here 1");
+// console.log("passed here");
+// giveAdvice(65, (err, data) => {
+//   if (err) console.log("ERROR:", err);
+//   else {
+//     console.log("Answer:", data);
+//   }
+// });
+// console.log("Passed here 1");
 
 // async function
 // async function giveAdvice(age) {
@@ -98,3 +98,16 @@ console.log("Passed here 1");
 //   console.log(answer);
 // }
 // run();
+
+// Task A
+
+function countLetter(letter, word) {
+  if (word.includes(letter)) {
+    const wordArray = word.split("");
+    return wordArray.filter((ele) => ele === letter).length;
+  } else {
+    console.log(`this word: ${word} does not contain this letter: ${letter}`);
+  }
+}
+
+console.log(countLetter("e", "engineer"));
