@@ -101,13 +101,69 @@
 
 // Task A
 
-function countLetter(letter, word) {
-  if (word.includes(letter)) {
-    const wordArray = word.split("");
-    return wordArray.filter((ele) => ele === letter).length;
-  } else {
-    console.log(`this word: ${word} does not contain this letter: ${letter}`);
-  }
+// function countLetter(letter, word) {
+//   if (word.includes(letter)) {
+//     const wordArray = word.split("");
+//     console.log(wordArray);
+//     return wordArray.filter((ele) => ele === letter).length;
+//   } else {
+//     console.log(`this word: ${word} does not contain this letter: ${letter}`);
+//   }
+// }
+
+// console.log(countLetter("e", "engineer"));
+
+// const countLetter = (letter, word) => {
+//   let count = 0;
+
+//   for (let i = 0; i < word.length; i++) {
+//     console.log(`${i} => ${word[i]}`);
+//     if (word[i] == letter) {
+//       count++;
+//     }
+//   }
+//   return count;
+// };
+
+// console.log(countLetter("e", "engineer"));
+
+// const countLetter = (a, b) => {
+//   a = a.toLowerCase();
+//   b = b.toLowerCase();
+
+//   let count = 0;
+//   for (const char of b) {
+//     // ✅ Cleaner loop
+//     if (char === a) count++;
+//   }
+//   return count;
+// };
+
+// console.log(countLetter("e", "Engineer")); // Output: 3
+
+// function countLetter(harf, jumla) {
+//   return jumla.split("").filter((a) => a === harf).length;
+// }
+
+// console.log(countLetter("e", "engineer"));
+
+// MIT Task B
+console.log("First way of counting digits");
+function countDigits(mixedWord) {
+  return mixedWord.split("").filter((ele) => Number(ele)).length;
 }
 
-console.log(countLetter("e", "engineer"));
+console.log(countDigits("ad2a54y79wet1sfgb9"));
+
+console.log("Second way of counting digits");
+const countDigits2 = (word) => {
+  let count = 0;
+  for (let i = 0; i < word.length; i++) {
+    if (Number(word[i])) {
+      count++;
+    }
+  }
+  return count;
+};
+
+console.log(countDigits2("ad2a54y79wet1sfgb9"));
