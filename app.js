@@ -5,6 +5,7 @@ const fs = require("fs");
 
 // MongoDB calling
 const db = require("./server").db();
+const mongodb = require("mongodb");
 
 let user;
 fs.readFile("database/user.json", "utf-8", (err, data) => {
@@ -29,16 +30,20 @@ app.set("view engine", "ejs");
 // 4 => Routing codes: Url
 app.post("/create-item", function (req, res) {
   console.log("user entered /create-item");
-  console.log(req.body);
   const new_reja = req.body.reja;
   db.collection("plans").insertOne({ reja: new_reja }, (err, data) => {
-    if (err) {
-      console.log(err);
-      res.end("Something went wrong");
-    } else {
-      res.end("successfully added");
-    }
+    res.json(data.ops[0]);
   });
+});
+
+app.post("/delete-item", (req, res) => {
+  const id = req.body.id;
+  db.collection("plans").deleteOne(
+    { _id: new mongodb.ObjectId(id) },
+    function (err, data) {
+      res.json({ state: "success" });
+    }
+  );
 });
 
 app.get("/", function (req, res) {
