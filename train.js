@@ -238,7 +238,7 @@ console.log(checkContent("mitgroup", "gmtiprou"));
 
 //   let count = 0;
 //   for (const char of b) {
-//     // ✅ Cleaner loop
+//     //  Cleaner loop
 //     if (char === a) count++;
 //   }
 //   return count;
