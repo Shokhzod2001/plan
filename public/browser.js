@@ -59,6 +59,38 @@ document.addEventListener("click", function (event) {
     }
   }
   if (event.target.classList.contains("edit-me")) {
-    alert("Siz edit buttonini bosdingiz!");
+    const userInput = prompt(
+      "You can edit!",
+      event.target.parentElement.parentElement.querySelector(".item-text")
+        .innerHTML
+    );
+    if (userInput) {
+      axios
+        .post("/edit-item", {
+          id: event.target.getAttribute("data-id"),
+          new_input: userInput,
+        })
+        .then((response) => {
+          console.log(response.data);
+          event.target.parentElement.parentElement.querySelector(
+            ".item-text"
+          ).innerHTML = userInput;
+        })
+        .catch((err) => {
+          console.log("Iltimos qaytadan harakat qilib ko`ring");
+        });
+    }
   }
+});
+
+document.getElementById("clean-all").addEventListener("click", function () {
+  axios
+    .post("/delete-all", { delete_all: true })
+    .then((response) => {
+      alert(response.data.state);
+      document.location.reload();
+    })
+    .catch((err) => {
+      console.log("Iltimos qaytadan harakat qilib ko`ring");
+    });
 });

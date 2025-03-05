@@ -1,3 +1,108 @@
+// Task D
+function checkContent(string1, string2) {
+  const word1 = string1.split("").sort().join("");
+  const word2 = string2.split("").sort().join("");
+  if (word1 === word2) {
+    return true;
+  } else {
+    return false;
+  }
+}
+console.log(checkContent("mitgroup", "gmtiprou"));
+
+//MITASK C
+// const products = ["bread", "noodle", "cola"];
+// const moment = require("moment");
+
+// class Shop {
+//   constructor(bread, noodle, cola) {
+//     this.bread = bread;
+//     this.noodle = noodle;
+//     this.cola = cola;
+//   }
+//   leftProduct() {
+//     const time = moment().format("HH:mm:ss");
+//     return `hozir ${time}da ${this.bread}ta non, ${this.noodle}ta lagmon va ${this.cola}ta cola mavjud `;
+//   }
+//   sellProduct(productName, number) {
+//     if (products.includes(productName)) {
+//       if (productName === "bread") {
+//         if (this.bread > number) {
+//           this.bread -= number;
+//           return `${number}ta ${productName} sotildi`;
+//         } else {
+//           return "We have not enough bread";
+//         }
+//       } else if (productName === "noodle") {
+//         if (this.noodle > number) {
+//           this.noodle -= number;
+//           return `${number}ta ${productName} sotildi`;
+//         } else {
+//           return "We have not enough noodle";
+//         }
+//       } else if (productName === "cola") {
+//         if (this.cola > number) {
+//           this.cola -= number;
+//           return `${number}ta ${productName} sotildi`;
+//         } else {
+//           return "We have not enough cola";
+//         }
+//       }
+//     } else {
+//       return `We have only these products: ${products}`;
+//     }
+//   }
+
+//   recieveProducts(productName, number) {
+//     if (products.includes(productName)) {
+//       if (productName === "bread") {
+//         this.bread += number;
+//       } else if (productName === "noodle") {
+//         this.noodle += number;
+//       } else if (productName === "cola") {
+//         this.cola += number;
+//       }
+//       return `${number}ta ${productName} qo'shildi`;
+//     } else {
+//       return `We can recieve only these products: ${products}`;
+//     }
+//   }
+// }
+
+// const shop = new Shop(4, 5, 2);
+// console.log(shop.leftProduct());
+// console.log(shop.sellProduct("noodle", 2));
+// console.log(shop.sellProduct("cola", 1));
+// console.log(shop.sellProduct("bread", 3));
+// console.log(shop.recieveProducts("cola", 4));
+// console.log(shop.recieveProducts("bread", 14));
+// console.log(shop.recieveProducts("cola", 3));
+// setTimeout(() => {
+//   console.log(shop.leftProduct());
+// }, 5000);
+
+// MIT Task B
+// console.log("First way of counting digits");
+// function countDigits(mixedWord) {
+//   return mixedWord.split("").filter((ele) => Number(ele)).length;
+// }
+
+// console.log(countDigits("ad2a54y79wet1sfgb9"));
+
+// console.log("Second way of counting digits");
+// const countDigits2 = (word) => {
+//   let count = 0;
+//   for (let i = 0; i < word.length; i++) {
+//     if (Number(word[i])) {
+//       count++;
+//     }
+//   }
+//   return count;
+// };
+
+// console.log(countDigits2("ad2a54y79wet1sfgb9"));
+
+// Task A
 // console.log("Shelby maslahatlari:");
 // const list = [
 //   "yaxshi talaba bo`ling", // 10-20
@@ -146,93 +251,3 @@
 // }
 
 // console.log(countLetter("e", "engineer"));
-
-// MIT Task B
-// console.log("First way of counting digits");
-// function countDigits(mixedWord) {
-//   return mixedWord.split("").filter((ele) => Number(ele)).length;
-// }
-
-// console.log(countDigits("ad2a54y79wet1sfgb9"));
-
-// console.log("Second way of counting digits");
-// const countDigits2 = (word) => {
-//   let count = 0;
-//   for (let i = 0; i < word.length; i++) {
-//     if (Number(word[i])) {
-//       count++;
-//     }
-//   }
-//   return count;
-// };
-
-// console.log(countDigits2("ad2a54y79wet1sfgb9"));
-
-//MITASK C
-const products = ["bread", "noodle", "cola"];
-const moment = require("moment");
-
-class Shop {
-  constructor(bread, noodle, cola) {
-    this.bread = bread;
-    this.noodle = noodle;
-    this.cola = cola;
-  }
-  leftProduct() {
-    const time = moment().format("HH:mm");
-    return `hozir ${time}da ${this.bread}ta non, ${this.noodle}ta lagmon va ${this.cola}ta cola mavjud `;
-  }
-  sellProduct(productName, number) {
-    if (products.includes(productName)) {
-      if (productName === "bread") {
-        if (this.bread > number) {
-          this.bread -= number;
-          return `${number}ta ${productName} sotildi`;
-        } else {
-          return "We have not enough bread";
-        }
-      } else if (productName === "noodle") {
-        if (this.noodle > number) {
-          this.noodle -= number;
-          return `${number}ta ${productName} sotildi`;
-        } else {
-          return "We have not enough noodle";
-        }
-      } else if (productName === "cola") {
-        if (this.cola > number) {
-          this.cola -= number;
-          return `${number}ta ${productName} sotildi`;
-        } else {
-          return "We have not enough cola";
-        }
-      }
-    } else {
-      return `We have only these products: ${products}`;
-    }
-  }
-
-  recieveProducts(productName, number) {
-    if (products.includes(productName)) {
-      if (productName === "bread") {
-        this.bread += number;
-      } else if (productName === "noodle") {
-        this.noodle += number;
-      } else if (productName === "cola") {
-        this.cola += number;
-      }
-      return `${number}ta ${productName} qo'shildi`;
-    } else {
-      return `We can recieve only these products: ${products}`;
-    }
-  }
-}
-
-const shop = new Shop(4, 5, 2);
-console.log(shop.leftProduct());
-console.log(shop.sellProduct("noodle", 2));
-console.log(shop.sellProduct("cola", 1));
-console.log(shop.sellProduct("bread", 3));
-console.log(shop.recieveProducts("cola", 4));
-console.log(shop.recieveProducts("bread", 14));
-console.log(shop.recieveProducts("cola", 3));
-console.log(shop.leftProduct());
