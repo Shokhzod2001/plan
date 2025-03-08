@@ -1,14 +1,21 @@
-// Task D
-function checkContent(string1, string2) {
-  const word1 = string1.split("").sort().join("");
-  const word2 = string2.split("").sort().join("");
-  if (word1 === word2) {
-    return true;
-  } else {
-    return false;
-  }
+// Task E
+function getReverse(word) {
+  return word.split("").reverse().join("");
 }
-console.log(checkContent("mitgroup", "gmtiprou"));
+
+console.log(getReverse("hello"));
+
+// Task D
+// function checkContent(string1, string2) {
+//   const word1 = string1.split("").sort().join("");
+//   const word2 = string2.split("").sort().join("");
+//   if (word1 === word2) {
+//     return true;
+//   } else {
+//     return false;
+//   }
+// }
+// console.log(checkContent("mitgroup", "gmtiprou"));
 
 //MITASK C
 // const products = ["bread", "noodle", "cola"];
